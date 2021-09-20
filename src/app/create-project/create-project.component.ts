@@ -64,6 +64,5 @@ export class CreateProjectComponent implements OnInit {
     this.project.status = this.projectForm.value.status;
     this.project.dateCreated = new Date().toString();
     this.project.archived = false;
-    // this.employee.doj = this.employeeForm.value.doj;
   }
 }
