@@ -1,0 +1,63 @@
+<!-- <a routerLinkActive="active" routerLink="/create">Add Project</a> -->
+
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered" *ngIf="projects && projects.length">
+      <thead>
+        <tr class="bg-primary">
+          <th>Name</th>
+          <th>Status</th>
+          <th>Date Created</th>
+          <th>Archived</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects">
+          <td>{{ project.name }}</td>
+          <td>{{ project.status }}</td>
+          <td>{{ project.dateCreated | date: "short" }}</td>
+          <td>{{ project.archived }}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="openPopup(project)"
+            >
+              Archieve
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="alert alert-danger" role="alert" *ngIf="projects && projects.length == 0">
+      No projects available !
+    </div>
+  </div>
+
+  <div
+    class="modal"
+    tabindex="-1"
+    role="dialog"
+    [ngStyle]="{ display: displayStyle }"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h4 class="modal-title">HI</h4>
+        </div> -->
+        <div class="modal-body">
+          <p>Are you sure that you want to archive {{ projectName }}?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" (click)="archieve()">
+            Yes
+          </button>
+          <button type="button" class="btn btn-danger" (click)="closePopup()">
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
