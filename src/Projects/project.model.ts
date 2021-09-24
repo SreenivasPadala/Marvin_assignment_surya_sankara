@@ -4,5 +4,5 @@ export interface IProject {
     status: string;    
     dateCreated: string;
     archived: boolean;
-    // doj: Date
+    
 }

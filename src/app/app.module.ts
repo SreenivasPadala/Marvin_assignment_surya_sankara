@@ -8,13 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectListComponent,
     CreateProjectComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

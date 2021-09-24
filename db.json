@@ -1,3 +1,25 @@
 {
-  "projects": []
+  "projects": [
+    {
+      "id": 1,
+      "name": "Test",
+      "status": "IN_PROGRESS",
+      "dateCreated": "Mon Sep 20 2021 15:57:51 GMT+0530 (India Standard Time)",
+      "archived": false
+    },
+    {
+      "id": 2,
+      "name": "proj",
+      "status": "IN_PROGRESS",
+      "dateCreated": "Thu Sep 23 2021 18:53:53 GMT+0530 (India Standard Time)",
+      "archived": false
+    },
+    {
+      "id": 3,
+      "name": "DDDD",
+      "status": "IN_PROGRESS",
+      "dateCreated": "Fri Sep 24 2021 08:48:17 GMT+0530 (India Standard Time)",
+      "archived": false
+    }
+  ]
 }

@@ -30,14 +30,11 @@ export class CreateProjectComponent implements OnInit {
     });
 
     this.route.paramMap.subscribe((params) => {
-      const empId = +params.get('id');
-
-      this.pageTitle = 'Create Employee';
+      
       this.project = {
         id: null,
         name: '',
         status: null,
-        // doj: null,
         dateCreated: new Date().toString(),
         archived: false,
       };
