@@ -17,13 +17,13 @@ export class ProjectService {
 
   addProject(project: IProject): Observable<IProject> {
     return this.httpClient.post<IProject>(this.baseUrl, project, {
-        headers: new HttpHeaders({
-            'Content-Type': 'application/json'
-        })
-    })    
-}
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+    });
+  }
 
   deleteProject(id: number): Observable<void> {
-    return this.httpClient.delete<void>(`${this.baseUrl}/${id}`)       
-}
+    return this.httpClient.delete<void>(`${this.baseUrl}/${id}`);
+  }
 }
